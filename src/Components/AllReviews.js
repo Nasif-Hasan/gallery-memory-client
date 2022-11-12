@@ -38,6 +38,28 @@ const AllReviews = () => {
         }
     }
 
+    const handleStatusUpdate = id => {
+        fetch(`http://localhost:5000/review/${id}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({status: 'Approved'})
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if (data.modifiedCount > 0) {
+                const remaining = reviews.filter(rev => rev._id !== id)
+                const approving = reviews.find(rev => rev._id !== id)
+                approving.status = "Approved"
+
+                const newReview = [ approving, ...remaining]
+                setReviews(newReview)
+            }
+        })
+    }
+
     return (
         <div>
             <h2 className='text-5xl'>Your submitted reviews {reviews.length}</h2>
@@ -61,6 +83,7 @@ const AllReviews = () => {
                             key={rev._id}
                             rev={rev}
                             handleDelete={handleDelete}
+                            handleStatusUpdate={handleStatusUpdate}
                           ></ReviewRow>)  
                         }
                        
