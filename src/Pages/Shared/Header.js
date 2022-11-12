@@ -1,7 +1,10 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../asset/logo.png'
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
+    const {user} = useContext(AuthContext)
 
     return (
 
@@ -35,6 +38,14 @@ const Header = () => {
                     <Link to='/login'>
                     
                         Login
+                    </Link>
+                    
+                    
+                </button>
+                <button className="btn text-orange-400">
+                    <Link to='/login'>
+                    
+                        {user?.name}
                     </Link>
                     
                     
