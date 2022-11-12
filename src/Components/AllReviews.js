@@ -4,14 +4,22 @@ import ReviewRow from './ReviewRow';
 
 const AllReviews = () => {
     const { user } = useContext(AuthContext);
-    const [reviews, setReviews] = useState({})
-
-    // const url = 
+    const [reviews, setReviews] = useState([])
+    
 
     useEffect(() => {
+        console.log(user);
+        if(!user.email){
+            return
+        }
         fetch(`http://localhost:5000/orders?email=${user.email}`)
             .then(res => res.json())
-            .then(data => setReviews(data))
+            .then(data => {
+                console.log(data)
+                setReviews(data)
+            })
+
+            
     }, [user?.email])
 
     return (
@@ -28,15 +36,16 @@ const AllReviews = () => {
                                     <input type="checkbox" className="checkbox" />
                                 </label>
                             </th>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th>Client Name</th>
+                            <th>Service Name</th>
+                            <th>Reviews</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
+
                         {
-                          reviews.map(rev => <ReviewRow
+                          reviews?.map(rev => <ReviewRow
                             key={rev._id}
                             rev={rev}
                           ></ReviewRow>)  
