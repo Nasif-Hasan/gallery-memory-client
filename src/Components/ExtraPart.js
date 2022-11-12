@@ -5,7 +5,7 @@ const ExtraPart = () => {
         <div>
             {/* part one */}
 
-            <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            <div className="px-4 py-16 bg-orange-200 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                 <div className="max-w-xl mb-10 md:mx-auto  sm:text-center lg:max-w-2xl md:mb-12">
                     <div>
                         <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
@@ -38,11 +38,10 @@ const ExtraPart = () => {
                             </svg>
                             <span className="relative">The</span>
                         </span>{' '}
-                        quick, brown fox jumps over a lazy dog
+                        new and exciting packages are here
                     </h2>
                     <p className="text-base text-gray-700 md:text-lg">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                    We collected the 39 best photographer we could find. Take a look at these portfolios to find new ideas for showcasing your photographs.
                     </p>
                 </div>
                 <div className="grid max-w-md gap-8 row-gap-10 sm:mx-auto lg:max-w-full lg:grid-cols-3">
@@ -65,10 +64,9 @@ const ExtraPart = () => {
                             </div>
                         </div>
                         <div>
-                            <h6 className="mb-2 font-semibold leading-5">The deep ocean</h6>
+                            <h6 className="mb-2 font-semibold leading-5">The full wedding cover</h6>
                             <p className="mb-3 text-sm text-gray-900">
-                                A flower in my garden, a mystery in my panties. Heart attack never
-                                stopped old Big Bear.
+                                We will cover your full wedding event and give you the best experience you have ever had.
                             </p>
                             <ul className="mb-4 -ml-1 space-y-2">
                                 <li className="flex items-start">
@@ -87,7 +85,7 @@ const ExtraPart = () => {
                                             />
                                         </svg>
                                     </span>
-                                    Computers
+                                    Two Photographer
                                 </li>
                                 <li className="flex items-start">
                                     <span className="mr-1">
@@ -105,7 +103,7 @@ const ExtraPart = () => {
                                             />
                                         </svg>
                                     </span>
-                                    Health
+                                    One Videographer
                                 </li>
                                 <li className="flex items-start">
                                     <span className="mr-1">
@@ -123,96 +121,7 @@ const ExtraPart = () => {
                                             />
                                         </svg>
                                     </span>
-                                    Reference
-                                </li>
-                            </ul>
-                            <a
-                                href="/"
-                                aria-label=""
-                                className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-                            >
-                                Learn more
-                            </a>
-                        </div>
-                    </div>
-                    <div className="flex flex-col sm:flex-row">
-                        <div className="sm:mr-4">
-                            <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gray-900 text-orange-400">
-                                <svg
-                                    className="w-12 h-12 text-deep-purple-accent-400"
-                                    stroke="currentColor"
-                                    viewBox="0 0 52 52"
-                                >
-                                    <polygon
-                                        strokeWidth="3"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        fill="none"
-                                        points="29 13 14 29 25 29 23 39 38 23 27 23"
-                                    />
-                                </svg>
-                            </div>
-                        </div>
-                        <div>
-                            <h6 className="mb-2 font-semibold leading-5">When has justice</h6>
-                            <p className="mb-3 text-sm text-gray-900">
-                                Rough pomfret lemon shark plownose chimaera southern sandfish
-                                kokanee northern sea robin Antarctic cod.
-                            </p>
-                            <ul className="mb-4 -ml-1 space-y-2">
-                                <li className="flex items-start">
-                                    <span className="mr-1">
-                                        <svg
-                                            className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                                            stroke="currentColor"
-                                            viewBox="0 0 52 52"
-                                        >
-                                            <polygon
-                                                strokeWidth="4"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                fill="none"
-                                                points="29 13 14 29 25 29 23 39 38 23 27 23"
-                                            />
-                                        </svg>
-                                    </span>
-                                    Computers
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="mr-1">
-                                        <svg
-                                            className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                                            stroke="currentColor"
-                                            viewBox="0 0 52 52"
-                                        >
-                                            <polygon
-                                                strokeWidth="4"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                fill="none"
-                                                points="29 13 14 29 25 29 23 39 38 23 27 23"
-                                            />
-                                        </svg>
-                                    </span>
-                                    Health
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="mr-1">
-                                        <svg
-                                            className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                                            stroke="currentColor"
-                                            viewBox="0 0 52 52"
-                                        >
-                                            <polygon
-                                                strokeWidth="4"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                fill="none"
-                                                points="29 13 14 29 25 29 23 39 38 23 27 23"
-                                            />
-                                        </svg>
-                                    </span>
-                                    Reference
+                                    Unlimited Photo
                                 </li>
                             </ul>
                             <a
@@ -243,10 +152,9 @@ const ExtraPart = () => {
                             </div>
                         </div>
                         <div>
-                            <h6 className="mb-2 font-semibold leading-5">Organically grow</h6>
+                            <h6 className="mb-2 font-semibold leading-5">Product video shoot</h6>
                             <p className="mb-3 text-sm text-gray-900">
-                                A slice of heaven. O for awesome, this chocka full cuzzie is as
-                                rip-off as a deep cracker.
+                                For your business shop or any restaurant we are giving you a full package of product videography.
                             </p>
                             <ul className="mb-4 -ml-1 space-y-2">
                                 <li className="flex items-start">
@@ -265,7 +173,7 @@ const ExtraPart = () => {
                                             />
                                         </svg>
                                     </span>
-                                    Computers
+                                    One advertisement video
                                 </li>
                                 <li className="flex items-start">
                                     <span className="mr-1">
@@ -283,7 +191,7 @@ const ExtraPart = () => {
                                             />
                                         </svg>
                                     </span>
-                                    Health
+                                    Three full poster
                                 </li>
                                 <li className="flex items-start">
                                     <span className="mr-1">
@@ -301,7 +209,96 @@ const ExtraPart = () => {
                                             />
                                         </svg>
                                     </span>
-                                    Reference
+                                    Banner Design
+                                </li>
+                            </ul>
+                            <a
+                                href="/"
+                                aria-label=""
+                                className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                            >
+                                Learn more
+                            </a>
+                        </div>
+                    </div>
+                    <div className="flex flex-col sm:flex-row">
+                        <div className="sm:mr-4">
+                            <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gray-900 text-orange-400">
+                                <svg
+                                    className="w-12 h-12 text-deep-purple-accent-400"
+                                    stroke="currentColor"
+                                    viewBox="0 0 52 52"
+                                >
+                                    <polygon
+                                        strokeWidth="3"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        fill="none"
+                                        points="29 13 14 29 25 29 23 39 38 23 27 23"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h6 className="mb-2 font-semibold leading-5">Model Portfolio</h6>
+                            <p className="mb-3 text-sm text-gray-900">
+                                For start a career on media you have to get some awesome photographs.
+                                So here we are for your model photoshoot.
+                            </p>
+                            <ul className="mb-4 -ml-1 space-y-2">
+                                <li className="flex items-start">
+                                    <span className="mr-1">
+                                        <svg
+                                            className="w-5 h-5 mt-px text-deep-purple-accent-400"
+                                            stroke="currentColor"
+                                            viewBox="0 0 52 52"
+                                        >
+                                            <polygon
+                                                strokeWidth="4"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                fill="none"
+                                                points="29 13 14 29 25 29 23 39 38 23 27 23"
+                                            />
+                                        </svg>
+                                    </span>
+                                    One full portfolio
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="mr-1">
+                                        <svg
+                                            className="w-5 h-5 mt-px text-deep-purple-accent-400"
+                                            stroke="currentColor"
+                                            viewBox="0 0 52 52"
+                                        >
+                                            <polygon
+                                                strokeWidth="4"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                fill="none"
+                                                points="29 13 14 29 25 29 23 39 38 23 27 23"
+                                            />
+                                        </svg>
+                                    </span>
+                                    Over hundred pictures
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="mr-1">
+                                        <svg
+                                            className="w-5 h-5 mt-px text-deep-purple-accent-400"
+                                            stroke="currentColor"
+                                            viewBox="0 0 52 52"
+                                        >
+                                            <polygon
+                                                strokeWidth="4"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                fill="none"
+                                                points="29 13 14 29 25 29 23 39 38 23 27 23"
+                                            />
+                                        </svg>
+                                    </span>
+                                    A short video
                                 </li>
                             </ul>
                             <a
@@ -329,13 +326,13 @@ const ExtraPart = () => {
                                     <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
                                     <path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
                                 </svg>
-                                <p className="px-6 py-1 text-lg italic">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quibusdam, eligendi exercitationem molestias possimus facere.</p>
+                                <p className="px-6 py-1 text-lg italic">"Absolutely amazing experience with Classic Photography. The photographers were amazing and we had such a blast with them. Worth every penny!!" </p>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="absolute bottom-0 right-0 w-8 h-8 dark:text-gray-700">
                                     <path d="M280,185.143V416H496V16H457.6ZM464,384H312V198.857L464,54.1Z"></path>
                                     <path d="M232,16H193.6L16,185.143V416H232ZM200,384H48V198.857L200,54.1Z"></path>
                                 </svg>
                             </div>
-                            <span className="w-12 h-1 my-2 rounded-lg dark:bg-violet-400"></span>
+                            <span className="w-12 h-1 my-2 rounded-lg dark:bg-orange-400"></span>
                             <p>Leroy Jenkins</p>
                         </div>
                         <div className="flex flex-col items-center max-w-lg mx-12 lg:mx-0">
@@ -344,14 +341,14 @@ const ExtraPart = () => {
                                     <path fill="currentColor" d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
                                     <path fill="currentColor" d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
                                 </svg>
-                                <p className="px-6 py-1 text-lg italic">Accusantium illum cupiditate harum asperiores iusto quos quasi quis quae! Fugit doloribus, voluptatum quidem magnam velit excepturi nobis, reprehenderit ducimus incidunt quisquam quae veritatis, quos iure harum.</p>
+                                <p className="px-6 py-1 text-lg italic">"Classic Photographers is such an amazing company! They always called back promptly & answered all questions. My Photographer was Stew, he was amazing. I have no words, he made my husband & I's wedding day perfect & magical!"</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="absolute bottom-0 right-0 w-8 h-8 dark:text-gray-700">
                                     <path fill="currentColor" d="M280,185.143V416H496V16H457.6ZM464,384H312V198.857L464,54.1Z"></path>
                                     <path fill="currentColor" d="M232,16H193.6L16,185.143V416H232ZM200,384H48V198.857L200,54.1Z"></path>
                                 </svg>
                             </div>
-                            <span className="w-12 h-1 my-2 rounded-lg dark:bg-violet-400"></span>
-                            <p>Leroy Jenkins</p>
+                            <span className="w-12 h-1 my-2 rounded-lg dark:bg-orange-400"></span>
+                            <p>Taylor A</p>
                         </div>
                     </div>
                 </section>

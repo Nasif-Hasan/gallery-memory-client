@@ -21,9 +21,9 @@ const Home = () => {
                     ></ServiceCard>)
                 }
             </div>
-            <div className=''>
+            <div className='my-10 text-center'>
                 <Link to='/servicePage'>
-                <button className="btn btn-outline btn-warning">See All Services</button>
+                <button className="btn text-orange-400">See All Services</button>
                 </Link>
             </div>
         </div>

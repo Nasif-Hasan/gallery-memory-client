@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 const ServiceCard = ({ service }) => {
     // console.log(service);
@@ -8,7 +9,13 @@ const ServiceCard = ({ service }) => {
         <div className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-900 dark:text-gray-100">
 
             <div>
-                <img src={picture} alt="" className="object-cover w-full mb-4 h-60 sm:h-96 dark:bg-gray-500" />
+                <PhotoProvider>
+
+                    <PhotoView>
+                        <img src={picture} alt="" className="object-cover w-full mb-4 h-60 sm:h-96 dark:bg-gray-500" />
+                    </PhotoView>
+
+                </PhotoProvider>
                 <h2 className="mb-1 text-3xl py-3 text-orange-400 font-semibold">{name}</h2>
                 <p className="text-sm dark:text-gray-400">{about}</p>
             </div>

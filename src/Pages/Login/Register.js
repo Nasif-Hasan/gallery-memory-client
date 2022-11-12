@@ -21,7 +21,7 @@ const Register = () => {
 
     return (
 
-        <div className="flex flex-col mx-auto mt-12 max-w-md p-6 rounded-md sm:p-10 dark:bg-gray-900 dark:text-gray-100">
+        <div className="flex flex-col mx-auto my-12 max-w-md p-6 rounded-md sm:p-10 dark:bg-gray-900 dark:text-gray-100">
             <div className="mb-8 text-center">
                 <h1 className="my-3 text-4xl font-bold">Register</h1>
                 <p className="text-sm dark:text-gray-400">Register to access</p>

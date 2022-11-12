@@ -4,7 +4,13 @@ import logo from '../../asset/logo.png'
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
-    const {user} = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleLogOut = () => {
+        logOut()
+        .then(() => { })
+        .catch(err => console.error(err))
+    }
 
     return (
 
@@ -15,9 +21,9 @@ const Header = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><Link>Homepage</Link></li>
-                        <li><Link>Portfolio</Link></li>
-                        <li><Link>About</Link></li>
+                        <li><Link to='/'>Home</Link></li>
+                        <li><Link to='/servicePage'>Service</Link></li>
+                        <li><Link to='/blog'>Blog</Link></li>
                     </ul>
                 </div>
             </div>
@@ -31,25 +37,25 @@ const Header = () => {
                 </Link>
             </div>
             <div className="navbar-end">
-                <button className="btn btn-ghost btn-circle">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                </button>
-                <button className="btn text-orange-400">
-                    <Link to='/login'>
-                    
-                        Login
-                    </Link>
-                    
-                    
-                </button>
-                <button className="btn text-orange-400">
-                    <Link to='/login'>
-                    
-                        {user?.name}
-                    </Link>
-                    
-                    
-                </button>
+                <div>
+                    {
+                        user ? <div>
+                            <button className="btn text-orange-400">
+                                <Link to='/login'>{user?.email}</Link>
+                            </button>
+                            <button onClick={handleLogOut} className="btn text-gray-400">
+                                <Link to='/login'>Logout</Link>
+                            </button>
+                        </div>
+                            :
+                            <button className="btn text-orange-400">
+                                <Link to='/login'>Login</Link>
+                            </button>
+                    }
+                </div>
+
+
+
             </div>
         </div>
     );
