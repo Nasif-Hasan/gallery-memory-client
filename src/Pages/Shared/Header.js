@@ -39,7 +39,7 @@ const Header = () => {
             <div className="navbar-end">
                 <div>
                     {
-                        user ? <div>
+                        user?.email ? <div>
                             <button className="btn text-orange-400">
                                 <Link to='/login'>{user?.email}</Link>
                             </button>

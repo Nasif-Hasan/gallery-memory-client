@@ -9,18 +9,34 @@ const AllReviews = () => {
 
     useEffect(() => {
         console.log(user);
-        if(!user.email){
+        if(!user?.email){
             return
         }
-        fetch(`http://localhost:5000/orders?email=${user.email}`)
+        fetch(`http://localhost:5000/orders?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
                 setReviews(data)
             })
-
-            
     }, [user?.email])
+
+    const handleDelete = id => {
+        const proceed = window.confirm('Are sure for delete')
+        if (proceed) {
+            fetch(`http://localhost:5000/review/${id}`, {
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.deletedCount > 0) {
+                    alert('Deleted Successfully')
+                    const remaining = reviews.filter(rev => rev._id !== id)
+                    setReviews(remaining)
+                }
+            })
+        }
+    }
 
     return (
         <div>
@@ -44,6 +60,7 @@ const AllReviews = () => {
                           reviews?.map(rev => <ReviewRow
                             key={rev._id}
                             rev={rev}
+                            handleDelete={handleDelete}
                           ></ReviewRow>)  
                         }
                        
