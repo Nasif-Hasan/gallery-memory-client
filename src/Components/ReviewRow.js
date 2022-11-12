@@ -2,16 +2,24 @@ import React from 'react';
 
 const ReviewRow = ({rev}) => {
     console.log(rev);
-   
-    const { serviceName, customer, email, photoURL, review } = rev
+    const { _id, serviceName, customer, email, photoURL, review } = rev
+    
+    const handleDelete = _id => {
+        const proceed = window.confirm('Are sure for delete')
+        if (proceed) {
+            fetch(`http://localhost:5000/review/${_id}`, {
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+        }
+    }
 
     return (
         <tr>
-            <th>
-                <label>
-                    <input type="checkbox" className="checkbox" />
-                </label>
-            </th>
+            
             <td>
                 <div className="flex items-center space-x-3">
                     <div className="avatar">
@@ -31,7 +39,12 @@ const ReviewRow = ({rev}) => {
             </td>
             <td>{review}</td>
             <th>
-                <button className="btn btn-ghost btn-xs">details</button>
+                <button className="btn btn-ghost btn-md text-green-600">Update</button>
+            </th>
+            <th>
+                <label>
+                    <button onClick={() => handleDelete(_id)} className="btn btn-ghost btn-md text-red-600 font-bold">X</button>
+                </label>
             </th>
         </tr>
     );

@@ -5,7 +5,7 @@ import ReviewRow from './ReviewRow';
 const AllReviews = () => {
     const { user } = useContext(AuthContext);
     const [reviews, setReviews] = useState([])
-    
+
 
     useEffect(() => {
         console.log(user);
@@ -31,14 +31,10 @@ const AllReviews = () => {
 
                     <thead>
                         <tr>
-                            <th>
-                                <label>
-                                    <input type="checkbox" className="checkbox" />
-                                </label>
-                            </th>
                             <th>Client Name</th>
                             <th>Service Name</th>
                             <th>Reviews</th>
+                            <th></th>
                             <th></th>
                         </tr>
                     </thead>
