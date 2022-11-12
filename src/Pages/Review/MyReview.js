@@ -32,7 +32,13 @@ const MyReview = () => {
             body: JSON.stringify(order)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                console.log(data)
+                if (data.acknowledged){
+                    alert('order placed successfully')
+                    form.reset()
+                }
+            })
             .catch(err => console.error(err))
 
     }

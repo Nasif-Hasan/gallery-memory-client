@@ -15,8 +15,8 @@ const ServiceCard = ({ service }) => {
             <div className="flex flex-wrap justify-between">
 
 
-                <div>
-                    Balance: {balance}
+                <div className='text-xl text-orange-400'>
+                    Price: {balance}
                 </div>
 
 
