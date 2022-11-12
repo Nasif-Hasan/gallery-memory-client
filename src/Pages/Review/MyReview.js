@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import AllReviews from '../../Components/AllReviews';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const MyReview = () => {
@@ -55,6 +56,8 @@ const MyReview = () => {
                     </div>
                 </div>
             </div>
+
+            <AllReviews></AllReviews>
 
             <div className="p-6 sm:p-12 dark:bg-gray-900 dark:text-gray-100">
                 <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row">
