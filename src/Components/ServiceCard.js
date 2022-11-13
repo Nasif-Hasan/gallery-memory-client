@@ -20,7 +20,7 @@ const ServiceCard = ({ service }) => {
                 </PhotoProvider>
 
                 <h2 className="mb-1 text-3xl py-3 text-orange-400 font-semibold">{name}</h2>
-                <p className="text-sm dark:text-gray-400">{about}</p>
+                <p className="text-sm dark:text-gray-400">{about.slice(0,100)}</p>
             </div>
             <div className="flex flex-wrap justify-between">
 

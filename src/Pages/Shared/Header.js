@@ -24,6 +24,8 @@ const Header = () => {
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/servicePage'>Service</Link></li>
                         <li><Link to='/blog'>Blog</Link></li>
+                        <li><Link to='/signReview'>Your Reviews</Link></li>
+
                     </ul>
                 </div>
             </div>
@@ -41,10 +43,10 @@ const Header = () => {
                     {
                         user?.email ? <div>
                             <button className="btn text-orange-400">
-                                <Link to='/login'>{user?.email}</Link>
+                                <Link>{user?.email}</Link>
                             </button>
                             <button onClick={handleLogOut} className="btn text-gray-400">
-                                <Link to='/login'>Logout</Link>
+                                <Link to='/'>Logout</Link>
                             </button>
                         </div>
                             :
