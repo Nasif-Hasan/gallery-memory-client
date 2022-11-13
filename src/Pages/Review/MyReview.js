@@ -1,11 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import AllReviews from '../../Components/AllReviews';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const MyReview = () => {
     const { _id, name, about, balance, picture } = useLoaderData()
     const { user } = useContext(AuthContext)
+
+    const [control, setControl] = useState([])
 
     const handleReview = event => {
         event.preventDefault()
@@ -23,6 +26,7 @@ const MyReview = () => {
             email,
             photoURL,
             review
+            
         }
 
         fetch('http://localhost:5000/orders', {
@@ -36,13 +40,19 @@ const MyReview = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged){
-                    alert('order placed successfully')
+                    toast.success('Thanks for your feedback')
                     form.reset()
                 }
             })
             .catch(err => console.error(err))
 
     }
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/orders/${_id}`)
+        .then(res => res.json())
+        .then(result => console.log(result))
+    }, [control])
 
     return (
         <div>

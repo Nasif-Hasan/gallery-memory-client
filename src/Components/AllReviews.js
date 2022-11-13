@@ -8,7 +8,7 @@ const AllReviews = () => {
 
     useEffect(() => {
         console.log(user);
-        if(!user?.email){
+        if (!user?.email) {
             return
         }
         fetch(`http://localhost:5000/orders?email=${user?.email}`, {
@@ -17,7 +17,7 @@ const AllReviews = () => {
             }
         })
             .then(res => {
-                if(res.status === 401 || res.status ===403){
+                if (res.status === 401 || res.status === 403) {
                     logOut()
                 }
                 return res.json()
@@ -34,20 +34,17 @@ const AllReviews = () => {
             fetch(`http://localhost:5000/review/${id}`, {
                 method: 'DELETE'
             })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.deletedCount > 0) {
-                    alert('Deleted Successfully')
-                    const remaining = reviews.filter(rev => rev._id !== id)
-                    setReviews(remaining)
-                }
-            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount > 0) {
+                        alert('Deleted Successfully')
+                        const remaining = reviews.filter(rev => rev._id !== id)
+                        setReviews(remaining)
+                    }
+                })
         }
     }
-
-
-    
 
 
     const handleStatusUpdate = id => {
@@ -56,20 +53,20 @@ const AllReviews = () => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify({status: 'Approved'})
+            body: JSON.stringify({ status: 'Approved' })
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            if (data.modifiedCount > 0) {
-                const remaining = reviews.filter(rev => rev._id !== id)
-                const approving = reviews.find(rev => rev._id !== id)
-                approving.status = "Approved"
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.modifiedCount > 0) {
+                    const remaining = reviews.filter(rev => rev._id !== id)
+                    const approving = reviews.find(rev => rev._id !== id)
+                    approving.status = "Approved"
 
-                const newReview = [ approving, ...remaining]
-                setReviews(newReview)
-            }
-        })
+                    const newReview = [approving, ...remaining]
+                    setReviews(newReview)
+                }
+            })
     }
 
     return (
@@ -91,14 +88,14 @@ const AllReviews = () => {
                     <tbody>
 
                         {
-                          reviews?.map(rev => <ReviewRow
+                          reviews?.sort((a, b) => a.itemM > b.itemM ? 1 : -1).map(rev => <ReviewRow
                             key={rev._id}
                             rev={rev}
                             handleDelete={handleDelete}
                             handleStatusUpdate={handleStatusUpdate}
-                          ></ReviewRow>)  
+                        ></ReviewRow>)  
                         }
-                       
+
                     </tbody>
                 </table>
             </div>

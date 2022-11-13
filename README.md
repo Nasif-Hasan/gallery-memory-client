@@ -68,3 +68,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+###### The website summery
+
+1. A Photography related website which have 6 services
+2. Could login with email and google 
+3. Have a privet section of service review
+4. Everyone can add reviews on every services
+5. Have a blog section which have 4 Q&A 
