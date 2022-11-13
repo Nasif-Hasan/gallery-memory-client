@@ -8,8 +8,8 @@ const Header = () => {
 
     const handleLogOut = () => {
         logOut()
-        .then(() => { })
-        .catch(err => console.error(err))
+        .then()
+        .catch()
     }
 
     return (
