@@ -3,6 +3,7 @@ import ServiceCard from '../../Components/ServiceCard';
 
 const ServicePage = () => {
     const services = useLoaderData()
+    
     return (
         <div>
             <h2 className='text-5xl font-bold pl-10 pt-10 text-orange-400'>All of our services</h2>

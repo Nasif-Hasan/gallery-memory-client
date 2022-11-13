@@ -5,15 +5,13 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
     const { user, logout } = useContext(AuthContext)
-
     const handleLogOut = () => {
         logout()
-        .then()
-        .catch()
+            .then()
+            .catch()
     }
 
     return (
-
         <div className="navbar bg-base-100 h-5">
             <div className="navbar-start">
                 <div className="dropdown">
@@ -25,7 +23,6 @@ const Header = () => {
                         <li><Link to='/servicePage'>Service</Link></li>
                         <li><Link to='/blog'>Blog</Link></li>
                         <li><Link to='/signReview'>Your Reviews</Link></li>
-
                     </ul>
                 </div>
             </div>
@@ -55,9 +52,6 @@ const Header = () => {
                             </button>
                     }
                 </div>
-
-
-
             </div>
         </div>
     );

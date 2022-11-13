@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import { AuthContext } from '../contexts/AuthProvider/AuthProvider';
 import ReviewRow from './ReviewRow';
 
@@ -38,15 +39,13 @@ const AllReviews = () => {
                 .then(data => {
                     console.log(data);
                     if (data.deletedCount > 0) {
-                        alert('Deleted Successfully')
+                        toast.dismiss('Deleted Successfully')
                         const remaining = reviews.filter(rev => rev._id !== id)
                         setReviews(remaining)
                     }
                 })
         }
     }
-
-
     const handleStatusUpdate = id => {
         fetch(`http://localhost:5000/review/${id}`, {
             method: 'PATCH',
@@ -70,12 +69,10 @@ const AllReviews = () => {
     }
 
     return (
-        <div>
-            <h2 className='text-5xl'>Your submitted reviews {reviews.length}</h2>
-
+        <div className='container mx-auto my-10'>
+            <h2 className='text-3xl mb-5 text-orange-400 font-bold'>Your have submitted {reviews.length} reviews</h2>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
-
                     <thead>
                         <tr>
                             <th>Client Name</th>
@@ -86,16 +83,14 @@ const AllReviews = () => {
                         </tr>
                     </thead>
                     <tbody>
-
                         {
-                          reviews?.sort((a, b) => a.itemM > b.itemM ? 1 : -1).map(rev => <ReviewRow
-                            key={rev._id}
-                            rev={rev}
-                            handleDelete={handleDelete}
-                            handleStatusUpdate={handleStatusUpdate}
-                        ></ReviewRow>)  
+                            reviews?.sort((a, b) => a.itemM > b.itemM ? 1 : -1)?.map(rev => <ReviewRow
+                                key={rev._id}
+                                rev={rev}
+                                handleDelete={handleDelete}
+                                handleStatusUpdate={handleStatusUpdate}
+                            ></ReviewRow>)
                         }
-
                     </tbody>
                 </table>
             </div>

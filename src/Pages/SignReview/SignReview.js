@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import ReviewRow from '../../Components/ReviewRow';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
@@ -6,7 +7,7 @@ const SignReview = () => {
     const { user } = useContext(AuthContext);
     const [reviews, setReviews] = useState([])
 
-
+    console.log(user);
     useEffect(() => {
         console.log(user);
         if (!user?.email) {
@@ -30,7 +31,7 @@ const SignReview = () => {
                 .then(data => {
                     console.log(data);
                     if (data.deletedCount > 0) {
-                        alert('Deleted Successfully')
+                        toast.dismiss('Deleted Successfully')
                         const remaining = reviews.filter(rev => rev._id !== id)
                         setReviews(remaining)
                     }
@@ -61,8 +62,10 @@ const SignReview = () => {
     }
 
     return (
-        <div>
-            <h2 className='text-5xl'>Your submitted reviews {reviews?.length}</h2>
+        <div className='container mx-auto my-10'>
+            <h2 className='text-5xl mb-5 mx-auto text-orange-400 font-bold'>Welcome to Gallery Of Memory</h2>
+
+            <h2 className='text-3xl mb-5 text-gray-700 font-bold'>Your have submitted {reviews.length} reviews</h2>
 
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
